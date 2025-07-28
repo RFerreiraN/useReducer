@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ListaDeUsuarios = () => {
+export const ListaTareas = () => {
   return (
     <>
       <h1>Hook useReducer</h1>
@@ -8,3 +8,4 @@ export const ListaDeUsuarios = () => {
     </>
   )
 }
+ 
