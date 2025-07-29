@@ -6,6 +6,22 @@ const initialState = [{
   finalizada: false
 }]
 
+//Acciones
+
+const agregarTarea = {
+  type: '[TAREAS] agregar Tarea',
+  payload: nuevaTarea
+}
+
+const editarTarea = {
+  type: '[TAREAS] editar Tarea',
+  payload: tareaEditada
+}
+
+const borrarTareas = {
+  type: '[TAREAS] borrar Tareas',
+}
+
 //Estados modificados
 
 const nuevaTarea = {
@@ -26,22 +42,6 @@ const deleteTareas = {
   finalizada: false
 }
 
-//Acciones
-
-const agregarTarea = {
-  type: '[TAREAS] agregar Tarea',
-  payload: nuevaTarea
-}
-
-const editarTarea = {
-  type: '[TAREAS] editar Tarea',
-  payload: tareaEditada
-}
-
-const borrarTareas = {
-  type: '[TAREAS] borrar Tareas',
-  payload: []
-}
 
 //Reducer 
 
@@ -61,7 +61,7 @@ const tareaReducer = (state = initialState, action = {}) => {
     return state
 }
 
-console.log(tareaReducer(initialState, editarTarea))
+console.log(tareaReducer(initialState, borrarTareas))
 
 
 export const ListaTareas = () => {
