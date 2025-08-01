@@ -1,24 +1,11 @@
 import { useState } from 'react'
+import { UseFormHook } from '../Hooks/UseFormHook'
 
 export const ComponentForm = () => {
 
-  const [inputValue, setInputValue] = useState({
-    email: ''
-  });
-  const { email } = inputValue;
+   const {initialForm, inputValue, handleInput, resetForm, onSubmitForm} = UseFormHook()
 
-  const handleInput = ({ target }) => {
-    const { name, value } = target
-    setInputValue({
-      ...inputValue,
-      [name]: value
-    })
-  }
-
-  const onSubmitForm = (event) => {
-    event.preventDefault()
-    console.log(inputValue)
-  }
+   const {email } = inputValue
 
   return (
     <>
@@ -31,11 +18,10 @@ export const ComponentForm = () => {
             name="email"
             value={email}
             onChange={handleInput}
-
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-danger">Submit</button>
       </form>
     </>
   )
