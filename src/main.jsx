@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { ComponentForm } from './Components/ComponentForm'
+import { ListaTareas } from './Components/ListaTareas'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ComponentForm/>
+    <ListaTareas/>
   </StrictMode>,
 )

@@ -12,7 +12,7 @@ const initialState = [{
 const nuevaTarea = {
   id: 2,
   tarea: 'Explicar useReducer',
-  finalizada : false
+  finalizada: false
 }
 
 const tareaEditada = {
@@ -22,7 +22,7 @@ const tareaEditada = {
 }
 
 const deleteTareas = {
- 
+
 }
 
 //Acciones
@@ -42,26 +42,30 @@ const borrarTareas = {
 }
 
 
-
 //Reducer 
 
 const tareaReducer = (state = initialState, action = {}) => {
-    switch (action.type) {
-      case '[TAREAS] agregar Tarea':
-          return [...state, action.payload];
+  switch (action.type) {
+    case '[TAREAS] agregar Tarea':
+      return [...state, action.payload];
 
-      case '[TAREAS] editar Tarea':
-          return [...state, action.payload];
-      
-      case '[TAREAS] borrar Tareas':
-          return []
-      default:
-        break;
-    }
-    return state
+    case '[TAREAS] editar Tarea':
+      return [...state, action.payload];
+
+    case '[TAREAS] borrar Tareas':
+      return []
+    default:
+      break;
+  }
+  return state
 }
 
 console.log(tareaReducer(initialState, agregarTarea))
+
+
+
+
+
 
 
 export const ListaTareas = () => {
@@ -69,7 +73,18 @@ export const ListaTareas = () => {
     <>
       <h1>Hook useReducer</h1>
       <hr />
-      
+      <form>
+        <div className="mb-3">
+          <input
+            type="email"
+            className="form-control"
+            name="exampleInputEmail1"
+            placeholder="Ingresar Tarea"
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </form>
     </>
   )
 }

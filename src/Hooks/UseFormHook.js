@@ -9,7 +9,6 @@ export const UseFormHook = () => {
     ...initialForm
   });
   
-  const { email } = inputValue;
 
   const handleInput = ({ target }) => {
     const { name, value } = target

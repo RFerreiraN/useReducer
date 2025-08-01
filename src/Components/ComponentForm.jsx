@@ -21,7 +21,7 @@ export const ComponentForm = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-danger">Submit</button>
+        <button type="submit" className="btn btn-dark">Submit</button>
       </form>
     </>
   )
