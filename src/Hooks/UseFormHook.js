@@ -1,9 +1,7 @@
 import { useState } from "react";
 
-export const UseFormHook = () => {
-  const initialForm = {
-    email : ''
-  }
+export const UseFormHook = (initialForm) => {
+ 
 
   const [inputValue, setInputValue] = useState({
     ...initialForm

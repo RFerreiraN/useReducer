@@ -1,5 +1,7 @@
 //Estado inicial
 
+import { UseFormHook } from "../Hooks/UseFormHook"
+
 const initialState = [{
   id: 1,
   tarea: 'Explicar Reducers',
@@ -27,10 +29,7 @@ const deleteTareas = {
 
 //Acciones
 
-const agregarTarea = {
-  type: '[TAREAS] agregar Tarea',
-  payload: nuevaTarea
-}
+
 
 const editarTarea = {
   type: '[TAREAS] editar Tarea',
@@ -60,26 +59,30 @@ const tareaReducer = (state = initialState, action = {}) => {
   return state
 }
 
-console.log(tareaReducer(initialState, agregarTarea))
-
-
-
-
-
-
 
 export const ListaTareas = () => {
+
+  const { tarea, inputValue, handleInput } = UseFormHook({tarea : ''})
+  const agregarTarea = (event) => {
+    event.preventDefault()
+    console.log(inputValue)
+    //type: '[TAREAS] agregar Tarea',
+    //payload: nuevaTarea
+  }
+
   return (
     <>
       <h1>Hook useReducer</h1>
       <hr />
-      <form>
+      <form onSubmit={agregarTarea}>
         <div className="mb-3">
           <input
-            type="email"
+            type="text"
             className="form-control"
-            name="exampleInputEmail1"
+            name="tarea"
             placeholder="Ingresar Tarea"
+            value={tarea}
+            onChange={handleInput}
           />
         </div>
 

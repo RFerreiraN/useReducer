@@ -3,9 +3,13 @@ import { UseFormHook } from '../Hooks/UseFormHook'
 
 export const ComponentForm = () => {
 
-   const {initialForm, inputValue, handleInput, resetForm, onSubmitForm} = UseFormHook()
+   const initialForm = {
+    email : ''
+  }
 
-   const {email } = inputValue
+   const {inputValue, handleInput, resetForm, onSubmitForm} = UseFormHook(initialForm)
+
+   const { email } = inputValue
 
   return (
     <>
