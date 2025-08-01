@@ -61,7 +61,7 @@ const tareaReducer = (state = initialState, action = {}) => {
     return state
 }
 
-console.log(tareaReducer(initialState, editarTarea))
+console.log(tareaReducer(initialState, agregarTarea))
 
 
 export const ListaTareas = () => {
