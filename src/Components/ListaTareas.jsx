@@ -55,7 +55,6 @@ const tareaReducer = (state = initialState, action = {}) => {
   return state
 }
 
-
 export const ListaTareas = () => {
 
   const { tarea, inputValue, handleInput } = UseFormHook({tarea : ''})
@@ -81,7 +80,7 @@ export const ListaTareas = () => {
             onChange={handleInput}
           />
         </div>
-
+        
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </>
