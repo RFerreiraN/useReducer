@@ -6,7 +6,6 @@ export const UseFormHook = (initialForm) => {
   const [inputValue, setInputValue] = useState({
     ...initialForm
   });
-  
 
   const handleInput = ({ target }) => {
     const { name, value } = target

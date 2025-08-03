@@ -24,12 +24,9 @@ const tareaEditada = {
 }
 
 const deleteTareas = {
-
 }
 
 //Acciones
-
-
 
 const editarTarea = {
   type: '[TAREAS] editar Tarea',
@@ -39,7 +36,6 @@ const editarTarea = {
 const borrarTareas = {
   type: '[TAREAS] borrar Tareas',
 }
-
 
 //Reducer 
 
