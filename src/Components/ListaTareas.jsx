@@ -1,3 +1,5 @@
+import { useReducer } from "react"
+
 //Estado inicial
 
 import { UseFormHook } from "../Hooks/UseFormHook"
@@ -57,6 +59,7 @@ const tareaReducer = (state = initialState, action = {}) => {
 
 export const ListaTareas = () => {
 
+  const [state, dispatch] = useReducer(tareaReducer, initialState)
   const { tarea, inputValue, handleInput } = UseFormHook({tarea : ''})
   const agregarTarea = (event) => {
     event.preventDefault()
@@ -80,9 +83,17 @@ export const ListaTareas = () => {
             onChange={handleInput}
           />
         </div>
-        
+
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
+      <hr />
+      <ul>
+        {state.map(item => {
+          return (
+            <li key={item.id}>{item.tarea}</li>
+          )
+        })}
+      </ul>
     </>
   )
 }
