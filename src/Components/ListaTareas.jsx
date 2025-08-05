@@ -5,9 +5,9 @@ import { useReducer } from "react"
 import { UseFormHook } from "../Hooks/UseFormHook"
 
 const initialState = [{
-  id: 1,
+  id: new Date().getTime(),
   tarea: 'Explicar Reducers',
-  finalizada: false
+  fializada: false
 }]
 
 
